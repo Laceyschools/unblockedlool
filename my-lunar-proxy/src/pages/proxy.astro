@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Proxy - Lunar" description="Lunar v2 Proxy">
+  <iframe id="proxy-iframe" class="w-full h-full border-none"></iframe>
+</Layout>
+
+<script>
+  import { encodeUrl, decodeUrl } from '../utils/proxy';
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const encodedUrl = urlParams.get('url');
+
+  if (encodedUrl) {
+    const decodedUrl = decodeUrl(encodedUrl);
+    const iframe = document.getElementById('proxy-iframe');
+    iframe.src = `${window.location.origin}/uv/service/${encodeUrl(decodedUrl)}`;
+  }
+</script>
