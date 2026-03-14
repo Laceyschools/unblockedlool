@@ -1,0 +1,27 @@
+{
+  "name": "my-lunar-proxy",
+  "type": "module",
+  "version": "2.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "node dist/server/entry.mjs",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/node": "^8.3.1",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.16.18",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "bare-server-node": "^2.0.2",
+    "@tomphttp/bare-server-node": "^2.0.2",
+    "http-proxy-middleware": "^3.0.3",
+    "uv-bundle": "https://github.com/titaniumnetwork-dev/Ultraviolet-App/releases/download/v3.0.0/uv-bundle.tar.gz"
+  },
+  "devDependencies": {
+    "prettier": "^3.1.0",
+    "prettier-plugin-astro": "^0.12.2"
+  }
+}
